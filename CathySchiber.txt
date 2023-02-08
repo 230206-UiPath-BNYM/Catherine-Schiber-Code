@@ -1,3 +1,5 @@
 Hi, I am Catherine Schiber, aka Cathy, and this is my training repository for demos.
 
 Hi Catherine, I've updated your File and updated it to your repository.
+
+This was added from a new branch.
