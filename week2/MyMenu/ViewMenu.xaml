@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>592,1882</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>592,1936.6666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ViewMenu_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -90,7 +90,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ViewMenu" sap:VirtualizedContainerService.HintSize="558.6666666666666,1817.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ViewMenu" sap:VirtualizedContainerService.HintSize="558.6666666666666,1872" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="myCase" />
     </Sequence.Variables>
@@ -100,7 +100,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadRange AddHeaders="True" DataTable="[in_menu_dt]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="496.6666666666667,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A:D" SheetName="menu" WorkbookPath="menu.xlsx" />
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="496.6666666666667,246" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter f for Full menu, c for Chef's Specials, and v for Valentine Day Exclusives" Title="Choose View">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="496.6666666666667,300.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="View Full Menu, Chef's Specials, or Valentine Day Exclusives" OptionsString="Full;Specials;Exclusives" Title="Choose View">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[myCase]</OutArgument>
       </ui:InputDialog.Result>
@@ -124,7 +124,7 @@
           </ui:FilterDataTable.SelectColumns>
         </ui:FilterDataTable>
       </Switch.Default>
-      <ui:FilterDataTable x:Key="f" DataTable="[in_menu_dt]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[in_menu_dt]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable x:Key="Full" DataTable="[in_menu_dt]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[in_menu_dt]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
@@ -140,7 +140,7 @@
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
       </ui:FilterDataTable>
-      <ui:FilterDataTable x:Key="c" DataTable="[in_menu_dt]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[in_menu_dt]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable x:Key="Specials" DataTable="[in_menu_dt]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[in_menu_dt]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -159,7 +159,7 @@
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
       </ui:FilterDataTable>
-      <ui:FilterDataTable x:Key="v" DataTable="[in_menu_dt]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[in_menu_dt]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable x:Key="Exclusives" DataTable="[in_menu_dt]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[in_menu_dt]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
