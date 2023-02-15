@@ -61,6 +61,11 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="498.6666666666667,1234" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Name="list">
@@ -105,7 +110,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="'dict = New Dictionary(Of String,Double)&#xD;&#xA;dict.Add(&quot;Pie&quot;,7.99)&#xD;&#xA;dict.Add(&quot;Coffee&quot;,3.50)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="436.6666666666667,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="'dict = New Dictionary(Of String,Double) welp&#xD;&#xA;dict.Add(&quot;Pie&quot;,7.99)&#xD;&#xA;dict.Add(&quot;Coffee&quot;,3.50)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="436.6666666666667,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
         <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="dict">[dict]</InOutArgument>
       </ui:InvokeCode.Arguments>
