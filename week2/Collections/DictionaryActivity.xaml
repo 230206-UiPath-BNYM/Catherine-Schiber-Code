@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Dict" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="592,614.6666666666666" sap2010:WorkflowViewState.IdRef="Dict_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Dict" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="592,2015.333333333333" sap2010:WorkflowViewState.IdRef="Dict_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -27,10 +27,12 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -63,26 +65,26 @@
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Dict" sap:VirtualizedContainerService.HintSize="540.6666666666666,1950.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Double)" Name="Phonebook">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Double)" ExpressionText="New Dictionary(Of String,Double)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Double)" Default="[New Dictionary(Of String,Double)]" Name="Phonebook" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Phonebook.Add(&quot;NotWalmart&quot;,1234444090)&#xD;&#xA;Phonebook.Add(&quot;NotTarget&quot;, 5556667777)&#xD;&#xA;Phonebook.Add(&quot;NotCostco&quot;,1213435555)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="478.6666666666667,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Phonebook.Add(&quot;NotWalmart&quot;,1234444090)&#xA;Phonebook.Add(&quot;NotTarget&quot;, 5556667777)&#xA;Phonebook.Add(&quot;NotCostco&quot;,1213435555)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="478.6666666666667,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
-        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="Phonebook">
-          <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Double)" ExpressionText="Phonebook" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="Phonebook">[Phonebook]</InOutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <If Condition="[Phonebook.ContainsKey(&quot;NotSafeway&quot;)]" sap:VirtualizedContainerService.HintSize="478.6666666666667,793.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
@@ -106,9 +108,7 @@
           <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="NotSafeway not in phonebook.  Adding" />
           <ui:InvokeCode ContinueOnError="{x:Null}" Code="Phonebook.Add(&quot;NotSafeway&quot;,7779998888)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="338,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
             <ui:InvokeCode.Arguments>
-              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="Phonebook">
-                <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Double)" ExpressionText="Phonebook" />
-              </InOutArgument>
+              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="Phonebook">[Phonebook]</InOutArgument>
             </ui:InvokeCode.Arguments>
           </ui:InvokeCode>
         </Sequence>
@@ -117,9 +117,7 @@
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="478.6666666666667,92" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="NotCostco not answering, removing contact." />
     <ui:InvokeCode ContinueOnError="{x:Null}" Code="Phonebook.Remove(&quot;NotCostco&quot;)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="478.6666666666667,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
       <ui:InvokeCode.Arguments>
-        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="Phonebook">
-          <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Double)" ExpressionText="Phonebook" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="Phonebook">[Phonebook]</InOutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="478.6666666666667,92" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;Number of contacts: &quot; &amp; Phonebook.Count]" />
