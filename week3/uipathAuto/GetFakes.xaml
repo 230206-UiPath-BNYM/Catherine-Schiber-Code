@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>685.3333333333334,3138.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>685.3333333333334,3336</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetFakes_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -103,7 +103,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetFakes" sap:VirtualizedContainerService.HintSize="695.3333333333334,3074" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetFakes" sap:VirtualizedContainerService.HintSize="695.3333333333334,3271.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="phone" />
       <Variable x:TypeArguments="x:String" Name="fakeString" />
@@ -114,13 +114,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:BuildDataTable DataTable="[out_fake_dt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="633.3333333333334,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;First_x0020_Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Last_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Company_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Role_x0020_in_x0020_Company&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Address&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Email&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Phone&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Random Person/Name Generator | User Identity, Account and Profile Generator" sap:VirtualizedContainerService.HintSize="633.3333333333334,2609.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4639fb14-aeb7-4e6d-97d0-4c4cbc92d861" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Random Person/Name Generator | User Identity, Account and Profile Generator" sap:VirtualizedContainerService.HintSize="633.3333333333334,2806.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4639fb14-aeb7-4e6d-97d0-4c4cbc92d861" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="591.3333333333334,2390" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do Browser" sap:VirtualizedContainerService.HintSize="591.3333333333334,2587.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="dashedPhone" />
               <Variable x:TypeArguments="x:String" Name="anEmail" />
@@ -142,9 +142,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="529.3333333333334,2276.6666666666665" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Adds 10 fake people to the dt&#xD;&#xA;" DisplayName="While" sap:VirtualizedContainerService.HintSize="529.3333333333334,2474" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492.6666666666667,2106" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492.6666666666667,2258" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -163,12 +163,12 @@
                       <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/Index/generate" DesignTimeRectangle="1161, 285, 120, 44" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Generate'" FullSelectorArgument="&lt;webctrl id='generate' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='generate' tag='INPUT' type='submit' class='btn btn-warning' aaname='Generate' check:text='Generate' /&gt;" Guid="f2173134-8209-45cd-8381-11d2c0011deb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAwCAYAAADThB6pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAVjSURBVHhe7Zw9b9tIEIbvVx1w9TVpcs39APWuUl3lxpUbdW5cuYibILiDK6lwEdhI4BwcAUGAGE5wFnC244McxDrqg6T4IU5mlrvkLrWSyBAMInIHeGGDu1wu+czOzFIAfwJjjTIDvGFmgDfMtMDd94dgHf0O/x/+AsOnPxttkIgZsSOGOlOAh+Nb1tl6/ijWn4/B+us3o00SMRP8kCUxlU0Bzlb1s1/1AxltnBhLZCpbApyFcfIKzYlGGyxkKof3BHgSynUnGW2ueGgXlgBnyd7k7PoJmRJbYQlwqvC0JxhtvIitMAO8ATLAGyYDvGEywBsmA7xhMsAbJgO8YfouwEcv98Eb3ELke/wKZPi/N4Dg332YdvXn1VNbYF/1Ifiga6teFQNvgXMt/UITTmFuXUL4gBoPASJ+POjD7ER3fv1kf8L7Rgs/6turVqXA7etBPGA4AP/9NoyyfbrbMPsyjfu4Z2Bn22so+66uwE86MI9HA7/X0vdh2gXfpn4ehJer+tVDtQUubgweni+u7IxGH/sY1ocQXrXVNowA7k0fojAeipnT10SLNvgutlGUOMZ6wZLSRYjj3hzAROkfa3zegcDmEYaMUs7nDo6h9puxW8G083cHQp/1RP+8Be+c9zlug/d5oM5zYSw+x4zJ4PPOp4wqAi5uDlftha49h7p76QNCaHPK+xY+VA4y+rQnQefX8/oQ0l9RK1CdwC26U51pQk7GLbLxPBx/7vKiMlNTxMCnWHTiHwQdPmAB6vbAofaTIwgFaJfa1HmCfcpT1Q7MBuk1oklcy3hvi8+njCoCjg+BjYSr4IWufZ1a4N7Hnh5hhFBW58kBBMwRMFW8Ecel1YOr3JGq/lGvFy/28BLcZAyebqi2UNJNC+w+LzKHR8l1Y+Bo485CpHAGfJ53sgOiujhPFg1wniISoLQhveB8yqhi4OiZmvYk3GctKdwO41WDkGaaLRtLAWT3B/zYqogi2tK5THkxGd3sZvrK/VNnFcDn/SeLfSe4CiMcWzPP+DzZMfXAi86njKoHrnkQVL1HPoVIroCHLgH8zRlflTyUZzXiBDBcTtmY4qHgCnmlXksHXAAUYTWrOVuZqfOIkB705HEzOv4Dpq/2wL3qgE+h2+H3lAN40fmUUUXAxUP2IHina89IAM4CX2dJRFiEmmo58HUmoOhWaiJMMf5YKrSEobOynF8A+DpT0sA3qiLgUm4b7GvbFS0DrsmZen0L8JzOiFoOXIyN9zk6A+9iD1f5Nkx4VNOdtxx4/vmUUWXArdenOffhqCzw7uqib0KFTORBdH/IjxUDLh663hn342IrwGu/jo8tBS7m7YhKXJa47nrgRedTRtUBRyVbjWgIwcUOjBf6tGDSO4JgnMnhVKV/4cewOlXetSfbIMppwpGKAZedMXi7JfVtgcMffrqdygE8eAeuUqtsgfMfHycLnL9aVQrAgvMpo0qBs23FP5fpnjTEVTnmxQjtVeNlHJuHe9Jz6WZfiO0XmmYfrm5TCgJHTcV2B21h34sOKkelPCE9LTBxj84dMvLi8ZTc+4EvAuxP1xT78CLzKaOKgXMdt2F2hzfAH0BiWKHPH85g1nuifxsn3rSJKp6MfmG7ameiRXHgpOTNlnAiShPWKbgv1Ye7HDiKijb5zR4bA+8JnVdsH5VQ3d0Fz0qLvPn1TtKWdz5l9H2AG/0wMsAbJgO8YTLAGyYDvGEywBsmA7xhMsAbJgO8YdICNx8EqKmWfRDAfPKjplr2yQ/zUZ+aCplqP+pDRp5gPttVH638bBeZ+TBfDUTMBD9kufLDfMJYeKfVjsmeKjyjzRErvpGdHMZl0wI3VlcD+ApUYYTJvRwztQAAAABJRU5ErkJggg==" InformativeScreenshot="d9444f4c7adc90dc4afc1ae67fb0b680.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NGetText DisplayName="Get Text 'Marilyn R Barnes'" sap:VirtualizedContainerService.HintSize="430.6666666666667,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="4639fb14-aeb7-4e6d-97d0-4c4cbc92d861" TextString="[fullName]" Version="V3">
+                  <uix:NGetText DisplayName="Get Text fullName" sap:VirtualizedContainerService.HintSize="430.6666666666667,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="4639fb14-aeb7-4e6d-97d0-4c4cbc92d861" TextString="[fullName]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/Index/generate" DesignTimeRectangle="483, 838, 172, 23" DesignTimeScaleFactor="1.5" FriendlyName="'Marilyn R Barnes'" FullSelectorArgument="&lt;webctrl tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='B' type='' class='click' /&gt;" Guid="7e1f2853-5c77-4838-8c84-f8aee90c8569" InformativeScreenshot="5acdd261cbdcb97ff6a05fd7de89b837.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <uix:NGetText DisplayName="Get Text 'Street: 1947'" sap:VirtualizedContainerService.HintSize="430.6666666666667,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="4639fb14-aeb7-4e6d-97d0-4c4cbc92d861" TextString="[address]" Version="V3">
+                  <uix:NGetText sap2010:Annotation.AnnotationText="Had to edit anchor to use street: * for inner text" DisplayName="Get Text address" sap:VirtualizedContainerService.HintSize="430.6666666666667,190" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="4639fb14-aeb7-4e6d-97d0-4c4cbc92d861" TextString="[address]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/Index/generate" DesignTimeRectangle="830, 654, 259, 23" DesignTimeScaleFactor="1.5" FriendlyName="'1947 Buckhannan Avenue'" FullSelectorArgument="&lt;webctrl idx='6' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' /&gt;" Guid="2f469074-6718-4608-9cfb-f9ba4a49d312" InformativeScreenshot="9cb72de7a47aa118e02d71be10bf3b3e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -178,8 +178,13 @@
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                   </uix:NGetText>
-                  <uix:NGetText DisplayName="Get Text 'Telephone: 315-429-9381'" sap:VirtualizedContainerService.HintSize="430.6666666666667,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="4639fb14-aeb7-4e6d-97d0-4c4cbc92d861" TextString="[dashedPhone]" Version="V3">
+                  <uix:NGetText sap2010:Annotation.AnnotationText="also had to edit anchor's inner text" DisplayName="Get Text phone" sap:VirtualizedContainerService.HintSize="430.6666666666667,190" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="4639fb14-aeb7-4e6d-97d0-4c4cbc92d861" TextString="[dashedPhone]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/Index/generate" DesignTimeRectangle="871, 744, 131, 23" DesignTimeScaleFactor="1.5" FriendlyName="'315-429-9381'" FullSelectorArgument="&lt;webctrl idx='7' isleaf='1' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='B' class='' /&gt;" Guid="3be279e3-5166-4ba3-a802-14f29409c2d1" InformativeScreenshot="7a7fa5634105894a2b625ccb6eda29a6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -189,6 +194,11 @@
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                   </uix:NGetText>
                   <uix:NGetText DisplayName="Get Text 'Email'" sap:VirtualizedContainerService.HintSize="430.6666666666667,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="4639fb14-aeb7-4e6d-97d0-4c4cbc92d861" TextString="[anEmail]" Version="V3">
                     <uix:NGetText.Target>
@@ -223,15 +233,20 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <Assign sap:VirtualizedContainerService.HintSize="430.6666666666667,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap2010:Annotation.AnnotationText="Removed dashes to match challenge format" sap:VirtualizedContainerService.HintSize="430.6666666666667,108.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[phone]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
                       <InArgument x:TypeArguments="x:String">[dashedPhone.Replace("-","")]</InArgument>
                     </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.6666666666667,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                  <ui:MultipleAssign sap2010:Annotation.AnnotationText="To get the correct space for the split had to copy it from the text for the fullName variable in the local panel when " DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.6666666666667,207.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                     <ui:MultipleAssign.AssignOperations>
                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -260,6 +275,11 @@
                         </ui:AssignOperation>
                       </scg:List>
                     </ui:MultipleAssign.AssignOperations>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                   </ui:MultipleAssign>
                   <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{firstName,lastName,theCompany,jobTitle,address,anEmail,phone}]" DataTable="[out_fake_dt]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="430.6666666666667,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                 </Sequence>
@@ -267,6 +287,11 @@
               <ui:InterruptibleWhile.Condition>
                 <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="counter &lt; 10" />
               </ui:InterruptibleWhile.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleWhile>
           </Sequence>
         </ActivityAction>
