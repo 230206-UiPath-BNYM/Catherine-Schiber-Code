@@ -1,15 +1,14 @@
 {
-  "name": "PDFDemo",
-  "description": "practice",
+  "name": "CWeatherTest",
+  "description": "test weather api in c#",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Database.Activities": "[1.7.1]",
     "UiPath.Excel.Activities": "[2.16.2]",
     "UiPath.Mail.Activities": "[1.18.2]",
-    "UiPath.PDF.Activities": "[3.11.0]",
     "UiPath.System.Activities": "[22.10.4]",
     "UiPath.Testing.Activities": "[22.10.3]",
-    "UiPath.UIAutomation.Activities": "[22.10.5]"
+    "UiPath.UIAutomation.Activities": "[22.10.5]",
+    "UiPath.WebAPI.Activities": "[1.13.3]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -46,11 +45,11 @@
     "fileInfoCollection": [],
     "modernBehavior": true
   },
-  "expressionLanguage": "VisualBasic",
+  "expressionLanguage": "CSharp",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "2f87d9c5-3fd5-4cef-94c9-af44bdb855aa",
+      "uniqueId": "b04c075a-8556-429d-968e-9cdaf93a1469",
       "input": [],
       "output": []
     }
