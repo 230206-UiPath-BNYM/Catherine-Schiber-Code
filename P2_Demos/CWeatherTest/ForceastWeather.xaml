@@ -196,7 +196,7 @@
               </OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:Int32">3</InArgument>
+              <InArgument x:TypeArguments="x:Int32">14</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
@@ -219,7 +219,7 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Need to use property panels to add params with variables.&#xA;Takes q= location and dt = yyyy-MM-dd strings" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://api.weatherapi.com/v1/forecast.json" sap:VirtualizedContainerService.HintSize="529.3333333333334,150.66666666666666" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" TimeoutMS="6000">
+    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Need to use property panels to add params with variables.&#xA;Takes q= location and days = numDays strings" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://api.weatherapi.com/v1/forecast.json" sap:VirtualizedContainerService.HintSize="529.3333333333334,150.66666666666666" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -230,9 +230,7 @@
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Headers>
       <ui:HttpClient.Parameters>
-        <InArgument x:TypeArguments="x:String" x:Key="key">
-          <Literal x:TypeArguments="x:String">a22c0ebbfedd4efc9af192621230903</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="key">a22c0ebbfedd4efc9af192621230903</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="q">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">in_city</CSharpValue>
         </InArgument>
@@ -477,7 +475,7 @@
         </Sequence>
       </ui:InterruptibleWhile.Body>
       <ui:InterruptibleWhile.Condition>
-        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">ind &lt; in_daysStay</CSharpValue>
+        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">ind &lt; in_daysStay</CSharpValue>
       </ui:InterruptibleWhile.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
