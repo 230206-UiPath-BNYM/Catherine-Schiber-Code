@@ -140,7 +140,7 @@
               </OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">03/28/2023</InArgument>
+              <InArgument x:TypeArguments="x:String">04/28/2023</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -150,7 +150,7 @@
               </OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">03/28/2023</InArgument>
+              <InArgument x:TypeArguments="x:String">05/02/2023</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
@@ -478,7 +478,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="430.6666666666667,92" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Visit starts within 2 weeks but ends after." />
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Takes in city, number of days stayed, outputs weather_dt.&#xD;&#xA;numDays set to 14, gets full forecast." DisplayName="ForecastWeather.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="430.6666666666667,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="ForecastWeather.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Takes in city, number of days stayed, outputs weather_dt.&#xA;numDays set to 14, gets full forecast." DisplayName="ForecastWeather.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="430.6666666666667,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="ForecastWeather.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_weather_dt">
                       <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">weather_dt</CSharpReference>
@@ -486,9 +486,7 @@
                     <InArgument x:TypeArguments="x:String" x:Key="in_city">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">city</CSharpValue>
                     </InArgument>
-                    <InArgument x:TypeArguments="x:Int32" x:Key="in_daysStay">
-                      <Literal x:TypeArguments="x:Int32" Value="14" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_daysStay">14</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
