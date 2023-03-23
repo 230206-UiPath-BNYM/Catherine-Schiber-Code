@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="402,1236.6666666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uea="clr-namespace:UiPathTeam.EncodeActivities.Activities;assembly=UiPathTeam.EncodeActivities.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="402,1267.3333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uea="clr-namespace:UiPathTeam.EncodeActivities.Activities;assembly=UiPathTeam.EncodeActivities.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
       <x:String>System.Activities</x:String>
@@ -99,7 +99,7 @@
       <AssemblyReference>UiPathTeam.EncodeActivities.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="412,1172" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="412,1202.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="imageFile" />
       <Variable x:TypeArguments="x:String" Name="result" />
@@ -128,7 +128,13 @@
         <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath-we-b.deskover.com/mlskills/c4ff9e80-cc3a-4016-8f37-68092a3a0a95/a428ef51-3bd6-41f4-b1ab-7dc975e80da2/cluster-b/objectdetection" AccountId="c4ff9e80-cc3a-4016-8f37-68092a3a0a95" Description="This is used to detect more than 6,000 generic objects" Id="dc81f6d2-1928-4fe0-895b-7e10fdcaba82" InputDescription="Path to the image to be analyzed." InputType="FILE" Name="ObjectDetection" OutputDescription="JSON with identified object's class byte array representation (allows you to see box around objects), identified object's class - name, score (between 0-1) and bounding_boxes coordinates. Example: {&quot;Predicted ByteArray&quot;: &quot;/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgI…TD&quot;, &quot;Predicted Class&quot;: [{&quot;class&quot;: &quot;book&quot;, &quot;score&quot;: &quot; 0.65&quot;, &quot;bounding_box&quot;: [38.348690032958984, 274.14703369140625, 116.80537414550781, 306.26788330078125]}, {&quot;class&quot;: &quot;book&quot;, &quot;score&quot;: &quot; 0.62&quot;, &quot;bounding_box&quot;: [34.108882904052734, 236.6508331298828, 118.49102783203125, 272.1687316894531]}]}" ProjectId="404a8f24-2825-4f0f-af20-2b50567b1c99" TenantId="a428ef51-3bd6-41f4-b1ab-7dc975e80da2" />
       </uma:MLSkills.SelectedMLSkill>
     </uma:MLSkills>
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="350,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonResult]" JsonString="[result]" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" sap2010:Annotation.AnnotationText="Make sure is jobject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="350,90.66666666666667" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonResult]" JsonString="[result]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:DeserializeJson>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="350,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[jsonResult.ToString]" />
     <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="DemoResult.txt" sap:VirtualizedContainerService.HintSize="350,136.66666666666666" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[result.ToString]" />
     <uea:DecodeImageFromBase64 Base64String="[jsonResult(&quot;Predicted ByteArray&quot;).ToString]" DisplayName="Decode Image from Base64" sap:VirtualizedContainerService.HintSize="350,90.66666666666667" sap2010:WorkflowViewState.IdRef="DecodeImageFromBase64_1" ImagePath="C:\Users\ccsch\OneDrive\Desktop\imagefolder" />
